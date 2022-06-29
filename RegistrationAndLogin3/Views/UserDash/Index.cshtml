@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>환영합니다!</h2>
+
+@if (Request.IsAuthenticated)
+{
+    <a href='@Url.Action("LogOut", "Register")' onclick='navigate(this.href);'>
+        <input style="float: right;" type="button" class="btn btn-outline-primary" value='Logout' />
+    </a>
+}  
